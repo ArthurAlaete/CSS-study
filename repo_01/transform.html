@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATIONS - transform</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            outline: 5px solid red;     
+        }
+
+        img {
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+            /* transform: scaleX(1.4); */
+            /* transform: scaleY(1.4); */
+            /* transform: rotate(50deg);
+            transform: rotate(-70deg); */
+            /* transform: skewX(20deg);
+            transform: skewY(30deg); */
+
+            /* Matching */
+            transform: translateX(100px) scale(1.2) rotate(-15deg)
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Brazil.png" alt="">
+    </div>  
+</body>
+</html>
