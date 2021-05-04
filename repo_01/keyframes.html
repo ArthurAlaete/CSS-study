@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .root {
+            background-image: url('https://i1.wp.com/hightechgirlblog.com/wp-content/uploads/2016/12/ceu-natal.jpg?fit=800%2C387&ssl=1');
+            height: 100vh;
+            
+        }
+
+        img {
+            animation: fly 4s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            height: 120px;
+            width: 120px;
+            bottom: -100px;
+            left: calc(50% - 60px);
+        }
+
+        /* from-to OU porcetagens */
+        @keyframes fly {
+            from {    
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(calc(-100vh - 120px));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <img src="./images/nave.png" alt="">
+    </div>
+</body>
+</html>
