@@ -15,18 +15,50 @@
         .root {
             background-image: url('https://i1.wp.com/hightechgirlblog.com/wp-content/uploads/2016/12/ceu-natal.jpg?fit=800%2C387&ssl=1');
             height: 100vh;
-            
+        }
+
+        html ::-webkit-scrollbar{
+            display: none;
         }
 
         img {
-            animation: fly 4s;
-            animation-iteration-count: infinite;
             position: absolute;
             height: 120px;
             width: 120px;
             bottom: -100px;
             left: calc(50% - 60px);
+            
+            /* animation-name: fly; */
+            /* animation-duration: 2s; */
+            /* animation-timing-function: ease; */
+            /* animation-timing-function: ease-in-out; */
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            /* animation-timing-function: steps(20, jump-start); */
+            /* animation-timing-function: linear; */
+            /* animation-delay: 1s; */
+            
+            /* animation-iteration-count: infinite; */
+            
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+            
+            /* animation-fill-mode: forwards; */
+            /* animation-fill-mode: backwards; */
+
+            /* animation-play-state: paused; */
+            /* animation-play-state: running; */
+
+
+            animation: fly 4s infinite;
         }
+
+        /* Example animation play state: paused and running */
+        
+        img:hover {
+            animation-play-state: paused;
+        } 
+
+
 
         /* from-to OU porcetagens */
         @keyframes fly {
