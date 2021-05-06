@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            animation: gradient 10s alternate infinite ease-in-out;
+            background: linear-gradient(-45deg, #ee7752, #e77c7e, #22a6d5, #23d5ab) no-repeat;
+            display: flex;
+            background-size: 300% 300%;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            height: 100vh;
+            font-size: 300%;
+
+        }
+        
+        @keyframes gradient {
+            from {
+                background-position: 0, 50%;
+            }
+
+            to {
+                background-position: 100%, 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animação Degradê</h1>
+</body>
+</html>
