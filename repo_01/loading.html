@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          min-height: 100vh;  
+        }
+
+        .c-loader {
+            animation: load 1s infinite;
+            width: 50px;
+            height: 50px;
+            border: 6px solid #e5e5e5;
+            border-top-color: #51d4db;
+            border-radius: 50%;
+            /* transform: scale(5); */
+        }
+
+        @keyframes load {
+           to {
+               transform: rotate(1turn);
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="c-loader"></div>
+</body>
+</html>
