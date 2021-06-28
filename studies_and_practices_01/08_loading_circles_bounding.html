@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading - Circles Bounding</title>
+    <style>
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .circle {
+            animation: bounce 0.5s ease-in infinite;
+            background-image: linear-gradient(to right, rgba(182, 65, 166, 0.5),  rgba(87, 36, 182, 0.5));
+            width: 20px;
+            height: 20px;
+            margin: 0 10px;
+            border-radius: 50%;
+        }
+
+        .circle:nth-of-type(2) {
+            animation-delay: 0.1s;
+        }
+
+        .circle:nth-of-type(3) {
+            animation-delay: 0.2s;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
