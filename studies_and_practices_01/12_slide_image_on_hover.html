@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Image on Hover</title>
+    <style>
+        body {
+            background-color: #1c363e;
+            margin: 0;
+            padding: 0;
+        }
+
+        .imageBox {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background: #000;
+            border-radius: 10px;
+            box-shadow: 0 20px 25px rgba(0, 0, 0, .5);
+            overflow: hidden;
+            transform: translateX(-50%, -50%);
+        }
+
+        .imageBox img {
+            width: 100%;
+            height: 100%;
+            transition: .5s;
+        }
+
+        .imageBox .textBox {
+            position: absolute;
+            bottom: -100%;
+            width: 100%;
+            height: 100%;
+            background: #7986cb;
+            box-sizing: border-box;
+            padding: 15px 10px;
+            font-family: arial;
+            font-size: 14px;
+            transition: .5s;
+        }
+
+        .imageBox .textBox p {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .imageBox:hover .textBox {
+            bottom: -65%;
+        }
+
+        .imageBox:hover img {
+            transform: translateY(-35%);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="imageBox">
+        <img src="./images/paisagem.jpg" />
+        <div class="textBox">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Dolores illo, facere optio maiores labore aliquid corrupti 
+                aperiam iusto atque officia voluptatum nam vitae magni 
+                dolore quaerat suscipit! Esse, hic ipsum!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
