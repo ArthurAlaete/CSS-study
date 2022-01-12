@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading - Circles Bounding</title>
     <style>
+
+        /* 
+            O segredo dessa animação está no delay da animação, cada Circle tem uma animação de "saltar"
+            mas cada um tem um delay de animação diferente. Ex: O Circle 2 tem um delay 0.1, então o Circle 3
+            deve ter o delay de 0.2, dessa forma, saltarão em sequência e não todos de uma vez.  
+        */
+
         .loading {
             display: flex;
             align-items: center;

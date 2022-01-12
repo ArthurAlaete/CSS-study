@@ -12,9 +12,25 @@
             margin: 200px auto;
         }
 
+        /* 
+            Stroke é a linha, texto ou contorno de um elemento.
+            stroke: define a cor.
+            stroke-width: define espessura da linha.
+            stroke-dashoffset: define a localização ao longo de um caminho SVG onde o traço de uma stroke começará.
+            stroke-dasharray: define o tracejamento da linha.
+            stroke-linecap: define o tipo de terminação de um caminho aberto.
+        */
+
+        /* 
+            O segredo da animação é setar um valor de stroke-dasharray muito alto,
+            dessa forma não conseguimos perceber o tracejamento. A localização do dashoffset durante a animação  
+            inicia-se no fim (valor do dasharray. Ex. 1000) e se move até o inicio (0), dando a sensação de preenchimento ao percorrer o caminho. 
+
+        */
+
         .animate-svg svg {
             animation: svgAnimation 3s cubic-bezier(0.85, 0, 0.15, 1) infinite;
-            stroke-width: 2px;
+            stroke-width: 2px; 
             stroke: #003366;
             width: 100%;
             height: 100%;
@@ -42,7 +58,6 @@
 </head>
 <body>
     <div class="animate-svg">
-
         <svg x="0px" y="0px" viewBox="0 0 533 74" fill="none">
             <path d="M45.5938 1.67188L59.7031 58.2969L70.8594 59.9375L44.4688 71.1875L53.4688 59.75L48.2188 46.6719L24.0312 47.4688L19.1094 61.3906L28.1562 73.2969L0.125 62.2344L13.9062 60.875L17.8438 47.6562H15.5469L11.6094 42.6406L19.5781 41.7969L28.0625 13.4844L18.4531 8.46875L45.5938 1.67188ZM26.2344 41.0469L44.9375 38.8906L35.3281 15.125L26.2344 41.0469Z" fill="black"/>
             <path d="M139.438 5.32812L126.125 9.17188L119.281 68.9375L88.9531 22.2031L84.1719 58.4844L97.2031 65.4219L66.4062 67.7188L78.6875 58.4844L79.5781 11.5625L65.5625 6.64062L96.1719 1.57812L114.406 48.6875L119.984 10.3906L109.719 0.6875L139.438 5.32812Z" fill="black"/>

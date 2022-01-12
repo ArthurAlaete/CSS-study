@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        /*
+            O segredo dessa animação se resume a um ::after com uma animação de movimento, 
+            um texto com uma animação de FadeIn e uma boa sincronizaçãode tempo entre as animações. 
+
+            AFTER:
+            . Inicialmente o after é posicionado fora da box model de sua tag (ex: com -101%, no nosso caso, no eixo X)
+            . Posteriormente, é posicionado para fora da box model, porém, do lado inverso. 
+            . Lembrando que a tag em questão precisa ter a propriedade hidden, para que o after não apareça 
+            quando estiver fora da box model.
+            . Dessa forma temos a sensação de aparecimento, movimento e desaparecimento durante a animação.
+
+            TEXTO:
+            . O texto tem somento uma animação de FadeIn, onde inicia-se com opacity 0 e muda pra 1.
+        */
+
+
         body {
             display: grid;
             font-family: sans-serif;

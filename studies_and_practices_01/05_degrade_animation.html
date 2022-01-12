@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        /* 
+            O que resulta nesse efeito é a definição de um background-size maior que a tela ou componente específico
+            onde posteriormente alteremos sua posição na tela, dessa forma, por ser um background 
+            com linear gradient temos a sensação que o background está mudando de cor,
+            mas na verdade, está apenas mudando sua posição. 
+        */
+
         body {
             animation: gradient 10s alternate infinite ease-in-out;
             background: linear-gradient(-45deg, #ee7752, #e77c7e, #22a6d5, #23d5ab) no-repeat;
@@ -16,7 +24,6 @@
             color: white;
             height: 100vh;
             font-size: 300%;
-
         }
         
         @keyframes gradient {

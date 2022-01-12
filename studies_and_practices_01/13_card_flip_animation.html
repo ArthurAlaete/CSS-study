@@ -7,6 +7,23 @@
     <script src="https://kit.fontawesome.com/3e0079178b.js" crossorigin="anonymous"></script>    <title>Card Flip Animation</title>
 </head>
 <style>
+
+    /* 
+        Sobre essa animação, um ponto importante inicialmente a se destacar é a propriedade perspective,
+        ela que dará o efeito sutil ao virar o card. Deve ser setada no elemento pai (aqui chamado de CardBox).
+        O CardBox é uma div que contém um Card com duas outras duas divs filhas, classificadas como .card-back (lado de trás) e .card-front (lado da frente)
+        A animação consiste em apenas virar o card no eixo Y com transformY(), 
+        mas para que isso funcione precisamos definir algumas propriedades a mais nos elementos:
+
+        transform-style: preserve-3d  --> Determina se os filhos desse elemento estão posicionado no espaço 3d. 
+        Setamos essa propriedade no Card para que o card-back e o card-front se posicionem nesse espaço.
+
+        backface-visibility: hidden; --> Determina se deve ser exibido ou não a parte de trás do elemento para o usuário.
+        Setamos no .card-back e no .card-front para que ao virar, mostre-se apenas um deles.
+
+    */
+
+
     body {
         background: #292929;
         align-items: center;
@@ -17,6 +34,7 @@
     }
 
     .cardBox {
+        /* A perspective dá a um elemento um espaço 3D, afetando a distância entre o plano Z e o usuário. */
         perspective: 500px;
         margin: 15px;
     }
@@ -27,6 +45,7 @@
         width: 200px;
         height: 200px;
         background: #fff;
+        /* Determina se os filhos desse elemento estão posicionado no espaço 3d */
         transform-style: preserve-3d;
         transition: .5s ease;
         box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
@@ -51,6 +70,7 @@
         width: 200px;
         height: 200px;
         color: white;
+        /* Determina se deve ser exibido ou não a parte de trás do elemento para o usuário */
         backface-visibility: hidden;
     }
 
