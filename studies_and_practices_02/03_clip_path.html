@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path</title>
+    <style>
+        /* Clipping (Recortar) 
+            
+            . Clipping é a operação que permite revelar somente 
+            determinadas partes de um elemento;
+
+            . Clipping-path define a região em que o que está dentro é mostrado
+            e o uqe está fora é escondido.
+        */
+
+        body {
+            background-color: rgba(166, 135, 250, 0.671);
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .one {
+            /* 
+                Recolhe a imagem de acordo com o valor passado. 
+                Inset funciona também utilizando os 4 valores como
+                padding e margin: top, right, bottom, left  
+            */
+            clip-path: inset(10px);
+        }
+
+        .two {
+            /*  
+                Estipula a imagem no formato de círculo de acordo com o tamanho informado.    
+            */
+            clip-path: circle(40%);
+        }
+
+        .three {
+            /* 
+                Cicle com at.
+                o At especifíca as posições X e Y onde o ponto da circunferência irá apontar.
+            */
+            clip-path: circle(40% at 30% 20%);
+        }
+
+        .four {
+            /*
+                Semelhante ao Circle, porém em formato de elipse.
+                Trabalha com dois valores e também aceita o At.
+            */
+            clip-path: ellipse(30% 40% at 50% 50%);
+        }
+
+        .five {
+            /* 
+                Formato de polígono
+                Aceita quantos valores forem necessários,
+                a cada separação de vírgula, um ponto de polígono é criado.
+            */
+            clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
+        }
+
+        </style>
+</head>
+<body>
+    <img class="one" src="https://i.pinimg.com/736x/43/30/64/433064bf3a413a0b044b40067cf9fdba.jpg" alt="">
+    <img class="two" src="https://i.pinimg.com/736x/43/30/64/433064bf3a413a0b044b40067cf9fdba.jpg" alt="">
+    <img class="three" src="https://i.pinimg.com/736x/43/30/64/433064bf3a413a0b044b40067cf9fdba.jpg" alt="">
+    <img class="four" src="https://i.pinimg.com/736x/43/30/64/433064bf3a413a0b044b40067cf9fdba.jpg" alt="">
+    <img class="five" src="https://i.pinimg.com/736x/43/30/64/433064bf3a413a0b044b40067cf9fdba.jpg" alt="">
+</body>
+</html>
