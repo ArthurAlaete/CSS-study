@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Shapes (Basic)</title>
+    <style>
+
+
+        /*
+        --> Shapes: 
+
+            shape-outside: Conteúdo flui em volta (outside) da forma
+            shape-inside: Conteúdo flui dentro da forma
+
+        --> Syntax:
+
+            shape-out: polygon(shape function params)
+            propriedade: função de shape (parâmetros da função shape)
+       
+        --> Shape Functions:
+
+            . circle()
+            . ellipse()
+            . inset()
+            . polygon()
+        
+        */
+
+        .container {
+            width: 300px;
+        }
+
+        img {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 10px;
+            shape-outside: inset(0px round 50%) border-box;
+            shape-margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://www.tutoriart.com.br/wp-content/uploads/2011/10/css3.jpg" alt="css icon image">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quae voluptate sed officiis, 
+            ratione quasi, ipsum adipisci repudiandae! ratione quasi, ipsum adipisci repudiandae! ratione quasi, 
+            ipsum adipisci repudiandae!
+        </p>
+    </div>
+</body>
+</html>
